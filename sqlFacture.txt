@@ -1,0 +1,13 @@
+SELECT CA.produitId, CA.quantite, AR.Titre, AR.prix, AR.idCategorie
+FROM commande_article AS CA JOIN article AS AR
+ON CA.produitId = AR.id
+WHERE CA.commandeId = ?
+
+SELECT CO.shipping, CO.total, CO.date, CO.sessionId, UT.nom, UT.Prenom, UT.email, UT.telephone
+FROM commande AS CO JOIN utilisateur AS UT
+ON CO.userId = UT.id
+WHERE userId = ?
+ORDER BY date DESC
+LIMIT 1
+
+UPDATE article SET quantite = (quantite-?) WHERE id = ?

@@ -1,0 +1,25 @@
+À faire :
+Liste des souhaits (models)
+Magasin (views)
+Contacter (views, models, controllers)
+
+À retravailler :
+Panier (quasi tout)
+recherche (pas encore vérif, mais surement le lien avec la database)
+Fiche_produit (mais en dernier, pas prioritaire)
+commandes (l'autre partie SQL, pas prioritaire)
+controllers/liste_de_souhaits.php (juste une vérif si co ou pas)
+ajouter article (controllers, views, models)
+
+À designer :
+accueil
+commandes
+boutique
+
+À supprimer :
+views/produits.php
+views/categorie.php
+controllers/produits
+controllers/categorie.php
+
+Pour les tests, on fera les derniers LUNDI!

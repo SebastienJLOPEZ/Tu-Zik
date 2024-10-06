@@ -1,0 +1,5 @@
+SELECT profilfabricant.Nom, profilfabricant.specialite, profilfabricant.adresse, profilfabricant.prix, utilisateur.email
+FROM profilfabricant JOIN utilisateur
+ON profilfabricant.utilisateurid = utilisateur.id;
+
+

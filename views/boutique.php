@@ -50,14 +50,14 @@
    //Et pour l'image, j'ai pas encore fait, donc on ce sera le dernier truc que je ferai lundi.
    function createSelectBox($optionCount){
       for($idx=1; $idx <= $optionCount; $idx++){
-          $out .= '<option value='.$idx.' >' . $idx . '</option>';
+          $out .= '<option id="quantite" name="quantite" value='.$idx.' >' . $idx . '</option>';
       }
       return $out;}
    foreach ($articles as $AR) {
    echo '<div class="box-container">
    <form action="../controllers/ajoutpanier.php" method="post" class="box">
    <div class="box">
-   <input type="hidden" id="titre" name="titre" value="'.$AR->Titre.'"/>'.$AR->Titre.'
+   <input type="hidden" id="titre" name="titre" value="'.$AR->id.'"/>'.$AR->Titre.'
    <br><select class="quantite" name="quantite">';
     echo createSelectBox($AR->quantite);
     echo '</select>
@@ -65,7 +65,7 @@
     <img src="../uploaded_img/" alt="">
     <div class="name"></div>
     <div class="flex">
-       <div class="prix"><span>€</span><span>/<input type="hidden" id="titre" name="titre" value="'.$AR->prix.'"/>'.$AR->prix.'</span></div>
+       <div class="prix"><span>€</span><span>/'.$AR->prix.'</span></div>
        <input type="number" name="qty" class="qty" min="1" max="99" onkeypress="if(this.value.length == 2) return false;" value="1">
     </div>
    <input type="submit" value="ajouter au panier" class="btn" name="ajouter_au_panier">

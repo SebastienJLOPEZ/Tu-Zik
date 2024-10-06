@@ -19,13 +19,13 @@
    <div class="box-container">
 
    <?php
-
+//Pour l'affichage des commandes, ce serait mieux que ce soit qu'en ligne, avec un lien cliquable sur l'ID pour afficher une page où se trouve la facture.
    foreach ($mesCommandes as $MC) {
    echo '
    <div class="box">
       <p>Id : <span>'.$MC->Id.'</span></p>
       <p>Date : <span>'.$MC->Date.'</span></p>
-      <p>Vendeur : <span>'.$MC->Prenom.'</span></p>
+      <p>Vendeur : <span>'.$MC->Vendeur.'</span></p>
       <p>Total : <span>'.$MC->Total.'</span></p>
       <p>Status : <span>'.$MC->Statue.'</span></p>
    </div>';

@@ -1,10 +1,12 @@
 <?php
+  require_once "../models/articles.php";
   session_start();
-  $ajouter_panier($_POST["Titre"], $_POST["Prix"], $_POST["Titre"], $_POST["Titre"], '0');
-  if ($_SESSION["user-id"]===TRUE){
-    $confirmer_panier($_SESSION["user-id"]);
-    require_once "../views/panier";
+  if (ISSET($_SESSION["user-id"])){
+    $ajouter_panier($_POST["titre"], $_POST["quantite"], $_SESSION["user-id"]);
+    header("location:javascript://history.go(-1)");
   } else {
-    require_once "/views/connexion.php"
+    $ajouter_panier($_POST["titre"], $_POST["quantite"], '0');
+    header("location:javascript://history.go(-1)");
   }
+
  ?>
